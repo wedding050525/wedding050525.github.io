@@ -60,28 +60,162 @@
 } */
 
 body {
-    min-height: 100vh;
-    color: var(--color-text);
-    background-color: black;
-    /* transition:
+  min-height: 100vh;
+  color: var(--color-text);
+  background-color: black;
+  /* transition:
       color 0.5s,
       background-color 0.5s; */
-    line-height: 1.6;
-    font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        'Segoe UI',
-        Roboto,
-        Oxygen,
-        Ubuntu,
-        Cantarell,
-        'Fira Sans',
-        'Droid Sans',
-        'Helvetica Neue',
-        sans-serif;
-    font-size: 15px;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero {
+  position: relative;
+  background: url('./img/foto-enzo-marcella-bacio.jpg');
+  background-position: bottom;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-family: 'Tangerine', cursive;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Nero con opacità del 50% */
+  z-index: 1;
+}
+
+.hero-text {
+  position: absolute;
+  top: 75px;
+  z-index: 2;
+  /* Sopra l'overlay */
+}
+
+.hero-text h1.primary-text {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+:root {
+  --bg-color: #D8D8D8;
+}
+
+.hero-text p {
+  font-size: 2.8rem;
+}
+
+.hero-text .date {
+  font-weight: bold;
+  font-size: 3.8rem;
+}
+
+/* ------*/
+
+.masked-text {
+  font-size: 4rem;
+  font-weight: bold;
+  color: transparent;
+  background-image: url('https://images.unsplash.com/photo-1732535725600-f805d8b33c9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: 200%;
+  /* Enlarged for smooth animation */
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 5s infinite alternate linear;
+}
+
+@keyframes animate-background {
+  0% {
+    background-position: 0 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+/* Sezioni generiche */
+.section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: 'Tangerine', cursive;
+  overflow: hidden;
+  /* Impedisce sovrapposizioni */
+  padding: 2rem;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Overlay nero semitrasparente */
+  z-index: 1;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.info {
+  font-size: 1.2rem;
+}
+
+.info a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+
+/* Chiesa */
+.church {
+  background: url('./img/foto-chiesa.jpg') no-repeat center center/cover;
+}
+
+/* Ricevimento */
+.reception {
+  background: url('./img/foto-ricevimento-2.jpg') no-repeat center center/cover;
+  background-position: bottom;
 }
