@@ -1,79 +1,111 @@
 body {
   min-height: 100vh;
-  color: var(--color-text);
+  color: white;
   background-color: black;
-  line-height: 1.6;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  font-size: 15px;
+  /* font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; */
+  font-family: 'Tangerine', cursive;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: 3.5rem;
 }
 
-/* Sfondo degli sposi */
-.hero {
-  position: relative;
-  background: url('../img/foto-enzo-marcella-bacio.jpg');
-  background-position: bottom;
+/* --------------- All section */
+section {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  color: white;
   text-align: center;
-  font-family: 'Tangerine', cursive;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  /* Nero con opacità del 50% */
+.content {
+  padding: 1rem;
+}
+
+.content a {
+  text-decoration: none;
+  color: white;
+}
+
+h2.section-title {
+  font-size: 3.5rem;
+}
+
+p.info-location {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+p.info-geolocation {
+  font-size: 1.3rem;
+  text-align: right;
+
+}
+
+
+/* ------------------- First Section */
+.primary {
+  background: url('../img/foto-enzo-marcella-bacio.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.info-primary {
+  font-size: 2.4rem;
+}
+
+.btn {
+  position: relative;
+  padding: 1.5rem 3rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  min-width: 200px;
   z-index: 1;
 }
 
-.hero-text {
+.neon-pulse {
+  background: transparent;
+  border: 2px solid rgb(0, 39, 15);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  overflow: visible;
+}
+
+.neon-pulse::before,
+.neon-pulse::after {
+  content: "";
   position: absolute;
-  top: 75px;
+  inset: -4px;
+  border: 2px solid rgb(0, 39, 15);
+  border-radius: inherit;
+  animation: pulseOut 2s ease-out infinite;
+  opacity: 0;
+}
+
+.neon-pulse::after {
+  animation-delay: 1s;
+}
+
+@keyframes pulseOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.container-primary-text {
   z-index: 2;
-  /* Sopra l'overlay */
+  padding-top: 5rem;
 }
 
-.hero-text h1.primary-text {
-  font-size: 4rem;
-  margin-bottom: 1rem;
+.container-primary-text h1.primary-text {
+  font-size: 5rem;
 }
-
-:root {
-  --bg-color: #D8D8D8;
-}
-
-.hero-text p {
-  font-size: 2.8rem;
-}
-
-.hero-text .date {
-  font-weight: bold;
-  font-size: 3.8rem;
-}
-
-/* ------*/
 
 .masked-text {
   font-size: 4rem;
@@ -81,7 +113,6 @@ body {
   color: transparent;
   background-image: url('https://images.unsplash.com/photo-1732535725600-f805d8b33c9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: 200%;
-  /* Enlarged for smooth animation */
   background-position: 0 50%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -100,122 +131,52 @@ body {
 }
 
 
-/* Sezioni generiche */
-.section {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  font-family: 'Tangerine', cursive;
-  overflow: hidden;
-  padding: 2rem;
-}
-
-.section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-.section-title {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
-
-.info {
-  font-size: 1.2rem;
-}
-
-.info a {
-  text-decoration: none;
-}
-
-.info a:hover {
-  text-decoration: underline;
-}
-
-blockquote {
-  /* border-left: 5px solid white; */
-  margin-left: 0;
-  /* padding: 1rem 0 1rem 2rem; */
-  font-size: 2rem;
-}
-
-/* Chiesa */
+/* -------------------  Chiesa */
 .church {
-  background: url('../img/foto-chiesa.jpg') no-repeat center center/cover;
-  background-position: bottom;
-  display: flex;
-  align-items: flex-start;
+  background: url('../img/foto-chiesa.jpg') no-repeat center center;
+  background-size: cover;
 }
 
-.church p,
-.reception p {
-  text-align: left;
-  line-height: 30px;
-  font-size: 20px;
-}
-
-.church p.info {
-  text-align: right !important;
-  margin-top: 50px;
-}
-
-.church .content {
-  position: absolute;
-  top: 8px;
-  z-index: 2;
-}
-
-/* Ricevimento */
+/* -------------------  Ricevimento */
 .reception {
-  background: url('../img/foto-ricevimento-2.jpg') no-repeat center center/cover;
-  background-position: bottom;
-  display: flex;
-  align-items: flex-start;
-}
-
-.reception .content {
-  z-index: 2;
-}
-
-.reception .info {
-  text-align: right !important;
-  margin-top: 80px;
-
-}
-
-.reception .info a {
-  color: white;
-
+  background: url('../img/foto-ricevimento-2.jpg') no-repeat center center;
+  background-size: cover;
 }
 
 .footer {
-  background-image: url(../img/foto-enzo-marcella.jpg);
-  background-position: center;
+  background: url('../img/foto-enzo-marcella.jpg') no-repeat center center;
   background-size: contain;
-  display: flex;
+  min-width: 535px;
+}
+
+.footer {
   align-items: center;
 }
 
 .footer .content {
-  z-index: 2;
-  margin-top: 8rem;
+  padding-top: 10rem;
 }
 
-.footer p {
-  font-size: 2rem;
-}
+/* Breakpoint per dispositivi mobili */
+@media (max-width: 768px) {
 
-p.iban {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* .container-primary-text h1.primary-text {
+    font-size: 2rem;
+  }
+
+  .masked-text {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  blockquote p {
+    font-size: 1rem;
+  }
+
+  .info a {
+    font-size: 0.9rem;
+  } */
 }
