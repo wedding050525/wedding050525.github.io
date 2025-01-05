@@ -1,0 +1,239 @@
+body {
+    min-height: 100vh;
+    color: white;
+    background-color: #DBC9AF;
+    /* font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; */
+    font-family: "Tangerine", cursive;
+    text-rendering: optimizeLegibility;
+    font-size: 3.5rem;
+}
+
+/* --------------- All section */
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.content {
+    padding: 2rem;
+}
+
+.content a {
+    text-decoration: none;
+    color: white;
+}
+
+h2.section-title {
+    font-size: 3.5rem;
+}
+
+p.info-location {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+p.info-geolocation {
+    font-size: 1.3rem;
+    text-align: right;
+}
+
+/* ------------------- First Section */
+.primary {
+    background: url("../img/foto-enzo-marcella-bacio.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.info-primary {
+    font-size: 2.4rem;
+}
+
+.container-primary-text {
+    z-index: 2;
+    padding-top: 5rem;
+}
+
+.container-primary-text h1.primary-text {
+    font-size: 5rem;
+}
+
+.masked-text {
+    font-size: 4rem;
+    font-weight: bold;
+    color: transparent;
+    background-image: url("https://images.unsplash.com/photo-1732535725600-f805d8b33c9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: 200%;
+    background-position: 0 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-background 5s infinite alternate linear;
+}
+
+@keyframes animate-background {
+    0% {
+        background-position: 0 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* -------------------  Chiesa */
+.church {
+    background: url("../img/foto-chiesa.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.church .content {
+    padding: 2rem 5.5rem;
+}
+
+/* -------------------  Ricevimento */
+.reception {
+    background: url("../img/foto-ricevimento-2.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.footer {
+    background: url("../img/foto-enzo-marcella.jpg") no-repeat center center;
+    background-size: contain;
+}
+
+.footer {
+    align-items: center;
+}
+
+.footer .content {
+    padding-top: 10rem;
+}
+
+/* Breakpoint per dispositivi mobili */
+@media (max-width: 768px) {
+    /* .container-primary-text h1.primary-text {
+    font-size: 2rem;
+  }
+
+  .masked-text {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  blockquote p {
+    font-size: 1rem;
+  }
+
+  .info a {
+    font-size: 0.9rem;
+  } */
+}
+
+/* SEZIONE TEST */
+
+text {
+    stroke: #ffffff;
+    font-size: 3.5rem;
+    animation: textAnimate 4s infinite alternate;
+
+}
+
+@keyframes textAnimate {
+    0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+        fill: hsla(189, 69%, 75%, 0)
+    }
+
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffstet: -20%;
+        fill: hsla(189, 68%, 75%, 0%)
+    }
+
+}
+
+a {
+    position: relative;
+    color: white;
+    /* Colore del testo */
+    text-decoration: none;
+    /* Rimuove la sottolineatura di default */
+    font-size: 1rem;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    /* Linea inizialmente invisibile */
+    height: 2px;
+    /* Altezza della linea */
+    background-color: white;
+    /* Colore della linea */
+    transition: width 0.3s ease;
+    /* Animazione per l'effetto di espansione */
+}
+
+.info-geolocation a:hover::after,
+.info-geolocation a:focus::after {
+    width: 100%;
+    /* La linea si espande fino alla larghezza completa dell'elemento */
+}
+
+/*# sourceMappingURL=style.css.map */
+/*
+
+
+
+.btn {
+    position: relative;
+    padding: 1.5rem 3rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    min-width: 200px;
+    z-index: 1;
+  }
+  
+  .neon-pulse {
+    background: transparent;
+    border: 2px solid rgb(0, 39, 15);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    overflow: visible;
+  }
+  
+  .neon-pulse::before,
+  .neon-pulse::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border: 2px solid rgb(0, 39, 15);
+    border-radius: inherit;
+    animation: pulseOut 2s ease-out infinite;
+    opacity: 0;
+  }
+  
+  .neon-pulse::after {
+    animation-delay: 1s;
+  }
+  
+  @keyframes pulseOut {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }*/
