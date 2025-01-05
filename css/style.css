@@ -51,11 +51,18 @@ p.info-geolocation {
 
 .container-primary-text {
     z-index: 2;
-    padding-top: 5rem;
+    padding-top: 2rem;
 }
 
 .container-primary-text h1.primary-text {
     font-size: 5rem;
+}
+
+.masking-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .masked-text {
@@ -88,7 +95,7 @@ p.info-geolocation {
 }
 
 .church .content {
-    padding: 2rem 5.5rem;
+    padding: 2rem;
 }
 
 /* -------------------  Ricevimento */
@@ -137,7 +144,7 @@ p.info-geolocation {
 
 text {
     stroke: #ffffff;
-    font-size: 3.5rem;
+    font-size: 3rem;
     animation: textAnimate 4s infinite alternate;
 
 }
