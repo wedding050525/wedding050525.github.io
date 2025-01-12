@@ -11,13 +11,17 @@ body {
 /* --------------- All section */
 section {
     height: 100vh;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     text-align: center;
 }
 
 .content {
     padding: 15px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .content a {
@@ -29,16 +33,8 @@ section {
     font-family: serif;
 }
 
-.geoChurck a {
-    position: absolute;
-    left: 220px;
-    top: 345px;
-}
-
-.geoLocation a {
-    position: absolute;
-    left: 40%;
-    top: 390px;
+.footer-content {
+    padding: 15px;
 }
 
 h2.section-title {
@@ -54,7 +50,7 @@ p.info-location {
 p.info-geolocation {
     font-size: 1.3rem;
     text-align: right;
-    position: relative
+    /* position: relative */
 }
 
 /* ------------------- First Section */
@@ -125,6 +121,7 @@ p.info-geolocation {
 
 .footer {
     align-items: center;
+    display: flex;
 }
 
 .footer .content {
@@ -178,12 +175,11 @@ text {
 
 }
 
+/*
 a {
     position: relative;
     color: white;
-    /* Colore del testo */
     text-decoration: none;
-    /* Rimuove la sottolineatura di default */
     font-size: 1rem;
 }
 
@@ -193,15 +189,11 @@ a::after {
     bottom: 0;
     left: 0;
     width: 0;
-    /* Linea inizialmente invisibile */
     height: 2px;
-    /* Altezza della linea */
     background-color: white;
-    /* Colore della linea */
     transition: width 0.3s ease;
-    /* Animazione per l'effetto di espansione */
 }
-
+*/
 .info-geolocation a:hover::after,
 .info-geolocation a:focus::after {
     width: 100%;
