@@ -72,12 +72,12 @@ p.info-geolocation {
     font-size: 5rem;
 }
 
-.masking-container {
+/* .masking-container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%);
-}
+} */
 
 .masked-text {
     font-size: 4rem;
