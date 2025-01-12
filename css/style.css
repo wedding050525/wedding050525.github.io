@@ -175,7 +175,7 @@ text {
 
 }
 
-/*
+
 a {
     position: relative;
     color: white;
@@ -193,7 +193,7 @@ a::after {
     background-color: white;
     transition: width 0.3s ease;
 }
-*/
+
 .info-geolocation a:hover::after,
 .info-geolocation a:focus::after {
     width: 100%;
