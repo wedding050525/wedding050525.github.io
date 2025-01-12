@@ -23,6 +23,10 @@ section {
 .content a {
     text-decoration: none;
     color: white;
+    padding: 1rem;
+    border-radius: .3rem;
+    background: #0000004a;
+    font-family: serif;
 }
 
 h2.section-title {
@@ -30,7 +34,7 @@ h2.section-title {
 }
 
 p.info-location {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-align: left;
 }
 
@@ -105,7 +109,7 @@ p.info-geolocation {
 }
 
 .footer {
-    background: url("../img/foto-enzo-marcella.jpg") no-repeat center center;
+    background: url("../img/foto-enzo-marcella-3.jpg") no-repeat center center;
     background-size: contain;
 }
 
