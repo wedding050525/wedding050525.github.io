@@ -17,7 +17,7 @@ section {
 }
 
 .content {
-    padding: 2rem;
+    padding: 15px;
 }
 
 .content a {
@@ -29,6 +29,18 @@ section {
     font-family: serif;
 }
 
+.geoChurck a {
+    position: absolute;
+    left: 220px;
+    top: 420px;
+}
+
+.geoLocation a {
+    position: absolute;
+    left: 40%;
+    top: 390px;
+}
+
 h2.section-title {
     font-size: 3.5rem;
 }
@@ -36,11 +48,13 @@ h2.section-title {
 p.info-location {
     font-size: 1.8rem;
     text-align: left;
+    line-height: 33px;
 }
 
 p.info-geolocation {
     font-size: 1.3rem;
     text-align: right;
+    position: relative
 }
 
 /* ------------------- First Section */
@@ -94,17 +108,13 @@ p.info-geolocation {
 
 /* -------------------  Chiesa */
 .church {
-    background: url("../img/foto-chiesa.jpg") no-repeat center center;
+    background: url("../img/chiesa-3.jpg") no-repeat center center;
     background-size: cover;
-}
-
-.church .content {
-    padding: 2rem;
 }
 
 /* -------------------  Ricevimento */
 .reception {
-    background: url("../img/foto-ricevimento-2.jpg") no-repeat center center;
+    background: url("../img/labelon-optimized.webp") no-repeat center center;
     background-size: cover;
 }
 
